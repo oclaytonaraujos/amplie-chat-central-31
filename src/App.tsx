@@ -23,6 +23,8 @@ import ChatInterno from "@/pages/ChatInterno";
 import Contatos from "@/pages/Contatos";
 import Kanban from "@/pages/Kanban";
 import ChatBot from "@/pages/ChatBot";
+import Automations from "@/pages/Automations";
+import AutomationBuilder from "@/pages/AutomationBuilder";
 import Usuarios from "@/pages/Usuarios";
 import Setores from "@/pages/Setores";
 import GerenciarEquipe from "@/pages/GerenciarEquipe";
@@ -107,6 +109,20 @@ function AppRoutes() {
           <Layout title="ChatBot" description="Automação inteligente">
             <ChatBot />
           </Layout>
+        </ProtectedRoute>
+      } />
+      
+      <Route path="/automations" element={
+        <ProtectedRoute>
+          <Layout title="Automações" description="Fluxos de automação">
+            <Automations />
+          </Layout>
+        </ProtectedRoute>
+      } />
+      
+      <Route path="/automations/builder/:id" element={
+        <ProtectedRoute>
+          <AutomationBuilder />
         </ProtectedRoute>
       } />
       
